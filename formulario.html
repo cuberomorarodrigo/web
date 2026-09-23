@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Primera Web</h1>
+        <h2>Enlaces:</h2>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="horario2.html">Horario</a>
+            <a href="formulario.html">Formulario</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Formulario de Contacto</h1>
+        <form>
+            <fieldset>
+                <legend>Información Personal</legend>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br>
+
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Restablecer">
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p>CIFP Virgen de Gracia</p>
+        <p>
+            Contacto:
+            <a href="mailto:cuberomorarodrigo@gmail.com">cuberomorarodrigo@gmail.com</a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,9 @@
+header{
+    background-color: rgba(116, 6, 131, 0.733);
+    padding: 1em;
+}
+footer{
+    background-color: #f2ab;
+    padding: 1em;
+    text-align: center;
+}
