@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+    border: 0px;
+    background-color: aqua;
+    background-image: url("../img/gameboy.png")
+}
+
+.recuadro{
+    font-style: bold;
+    border: 2px solid black;
+}
