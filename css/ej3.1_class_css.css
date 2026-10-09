@@ -6,6 +6,26 @@ h1{
 }
 
 .recuadro{
-    font-style: bold;
+    font-weight: bold;
     border: 2px solid black;
+    border-color: purple;
+}
+
+#p1{
+    background-color: rgb(134, 231, 134);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#p2{
+    background-color: rgb(231, 200, 61);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#p3{
+    background-color: rgb(54, 19, 148);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
 }

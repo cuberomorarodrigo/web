@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3.2</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        iframe {
+            min-width: 0;
+            width: 100%;
+            height: 400px;
+            box-sizing: border-box;
+        }
+
+        a {
+            background-color: #27c95d;
+            padding: 10px;
+        }
+
+        body > div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="ej1_texto.html" title="Primera página"></iframe>
+    <iframe src="ej1.2_texto.html" title="Segunda página"></iframe>
+    <div>
+        <a href="https://www.ieslassalinas.org/">IES Las Salinas</a>
+        <iframe src="ej1.3_texto.html" title="Tercera página"></iframe>
+    </div>
+</body>
+</html>
