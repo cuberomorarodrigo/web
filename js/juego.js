@@ -1,7 +1,13 @@
-function juego(jugador, máquina) {
 
-if (jugador == máquina) {
-    console.log("Empate");
+function juego(jugador, máquina) {
+        const opciones = ["piedra", "papel", "tijera"];
+        const maquina = opciones[Math.floor(Math.random() * opciones.length)];
+        let mensaje;
+
+        const ejemplo = "coche";
+
+if (jugador == máquina) { 
+    mensaje = "Empate";
 }
 
 else if (
@@ -9,10 +15,11 @@ else if (
         (jugador == "tijera" && máquina == "papel")  ||
         (jugador == "papel" && máquina == "piedra") 
 )
-        {console.log("Gana el jugador");
+        {mensaje = "Gana el jugador";
 }
 
-else {console.log("Gana la máquina");
+else {
+        mensaje = "Gana la máquina";
 }
 }
 
