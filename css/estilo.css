@@ -7,6 +7,12 @@ footer{
     padding: 1em;
     text-align: center;
 }
+nav{
+    text-align: center;
+    padding: 5px;
+    margin: 0px, 10px;
+}
+
 .fh{
     background-color:rgb(45, 121, 22);
 }
