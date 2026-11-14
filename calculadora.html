@@ -3,45 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111827">
     <title>Calculadora</title>
-    <script src="js/calculadora.js"></script>
+    <link rel="stylesheet" href="css/calculadora.css">
+    <script src="js/calculadora.js" defer></script>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <input type="text" id="pantalla" value="0" readonly>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><button onclick="escribir('7')">7</button></td>
-                <td><button onclick="escribir('8')">8</button></td>
-                <td><button onclick="escribir('9')">9</button></td>
-                <td><button onclick="escribir('/')">/</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="escribir('4')">4</button></td>
-                <td><button onclick="escribir('5')">5</button></td>
-                <td><button onclick="escribir('6')">6</button></td>
-                <td><button onclick="escribir('*')">*</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="escribir('1')">1</button></td>
-                <td><button onclick="escribir('2')">2</button></td>
-                <td><button onclick="escribir('3')">3</button></td>
-                <td><button onclick="escribir('-')">-</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="escribir('0')">0</button></td>
-                <td><button onclick="escribir('.')">.</button></td>
-                <td><button onclick="escribir('=')">=</button></td>
-                <td><button onclick="escribir('+')">+</button></td>
-            </tr>
-            <tr>
-                <td colspan="4"><button>C</button></td>
-            </tr>
-        </tbody>
-    </table>
+    <main class="calculator" aria-label="Calculadora">
+        <header class="calculator__header">
+            <p class="calculator__eyebrow">CALCULADORA</p>
+            <h1>Haz tus cuentas</h1>
+        </header>
+
+        <output class="calculator__display" id="pantalla" aria-live="polite" aria-atomic="true">0</output>
+
+        <div class="calculator__keys" aria-label="Teclas de la calculadora">
+            <button class="key key--utility" type="button" data-action="clear" aria-label="Borrar todo">AC</button>
+            <button class="key key--utility" type="button" data-action="delete" aria-label="Borrar último dígito">DEL</button>
+            <button class="key key--operator" type="button" data-action="operator" data-value="/" aria-label="Dividir">÷</button>
+            <button class="key key--operator" type="button" data-action="operator" data-value="*" aria-label="Multiplicar">×</button>
+
+            <button class="key" type="button" data-action="digit" data-value="7">7</button>
+            <button class="key" type="button" data-action="digit" data-value="8">8</button>
+            <button class="key" type="button" data-action="digit" data-value="9">9</button>
+            <button class="key key--operator" type="button" data-action="operator" data-value="-">−</button>
+
+            <button class="key" type="button" data-action="digit" data-value="4">4</button>
+            <button class="key" type="button" data-action="digit" data-value="5">5</button>
+            <button class="key" type="button" data-action="digit" data-value="6">6</button>
+            <button class="key key--operator" type="button" data-action="operator" data-value="+">+</button>
+
+            <button class="key" type="button" data-action="digit" data-value="1">1</button>
+            <button class="key" type="button" data-action="digit" data-value="2">2</button>
+            <button class="key" type="button" data-action="digit" data-value="3">3</button>
+            <button class="key key--equals" type="button" data-action="equals" aria-label="Igual">=</button>
+
+            <button class="key key--zero" type="button" data-action="digit" data-value="0">0</button>
+            <button class="key" type="button" data-action="decimal" aria-label="Coma decimal">.</button>
+        </div>
+        <p class="calculator__hint">También puedes usar el teclado</p>
+    </main>
 </body>
 </html>

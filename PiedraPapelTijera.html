@@ -3,22 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piedra, Papel o Tijera</title>
-    <link rel="stylesheet" href="../css/juego.css">
-    <script src="js/juego.js" defer></script>
+    <meta name="theme-color" content="#11142a">
+    <title>Piedra, papel o tijera</title>
+    <link rel="stylesheet" href="css/PiedraPapelTijera.css">
+    <script src="js/PiedraPapelTijera.js" defer></script>
 </head>
 <body>
-    <main>
-        <h1>Piedra, papel o tijera</h1>
-        <p class="instrucciones">Elige una opción y juega contra la máquina.</p>
+    <main class="game">
+        <header class="game__header">
+            <p class="game__eyebrow">RETO CLÁSICO</p>
+            <h1>Piedra, papel o tijera</h1>
+            <p>Elige tu jugada y demuestra quién manda.</p>
+        </header>
 
-        <div class="opciones">
-            <button type="button" onclick="juego('piedra')">Piedra</button>
-            <button type="button" onclick="juego('papel')">Papel</button>
-            <button type="button" onclick="juego('tijera')">Tijera</button>
+        <section class="scoreboard" aria-label="Marcador de la partida">
+            <div class="score-card">
+                <span class="score-card__label">TÚ</span>
+                <strong id="marcador-jugador">0</strong>
+                <span class="score-card__name">Jugador</span>
+            </div>
+            <div class="scoreboard__separator" aria-hidden="true">:</div>
+            <div class="score-card score-card--machine">
+                <span class="score-card__label">CPU</span>
+                <strong id="marcador-maquina">0</strong>
+                <span class="score-card__name">Máquina</span>
+            </div>
+        </section>
+
+        <p class="game__progress" id="progreso">Primero en ganar 3 rondas · máximo 5 rondas</p>
+
+        <section class="arena" aria-label="Jugadas de la ronda">
+            <div class="player-choice">
+                <span class="player-choice__name">Tú</span>
+                <span class="player-choice__hand" id="eleccion-jugador" aria-label="Sin elección">?</span>
+                <span class="player-choice__caption" id="nombre-jugador">Elige una jugada</span>
+            </div>
+            <span class="arena__versus" aria-hidden="true">VS</span>
+            <div class="player-choice">
+                <span class="player-choice__name">Máquina</span>
+                <span class="player-choice__hand" id="eleccion-maquina" aria-label="Sin elección">?</span>
+                <span class="player-choice__caption" id="nombre-maquina">Esperando...</span>
+            </div>
+        </section>
+
+        <p class="round-result" id="mensaje" aria-live="polite" aria-atomic="true">¿Preparado? Elige piedra, papel o tijera.</p>
+
+        <div class="choices" aria-label="Elige tu jugada">
+            <button class="choice-button" type="button" data-eleccion="piedra">
+                <span aria-hidden="true">✊</span>
+                <span>Piedra</span>
+            </button>
+            <button class="choice-button" type="button" data-eleccion="papel">
+                <span aria-hidden="true">✋</span>
+                <span>Papel</span>
+            </button>
+            <button class="choice-button" type="button" data-eleccion="tijera">
+                <span aria-hidden="true">✌️</span>
+                <span>Tijera</span>
+            </button>
         </div>
 
-        <p id="mensaje"></p>
+        <section class="rounds" aria-label="Resultados de las rondas">
+            <h2>Rondas</h2>
+            <ol class="rounds__list" id="historial"></ol>
+        </section>
+
+        <button class="reset-button" id="reiniciar" type="button">Reiniciar partida</button>
     </main>
 </body>
 </html>
