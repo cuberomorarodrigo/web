@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adivina el número</title>
+    <link rel="stylesheet" href="../css/adivina.css"></link>    
+  </head>
+
+  <body>
+    <main>
+      <h1>Adivina el número</h1>
+
+      <p>
+        Estoy pensando en un número entre 1 y 100.
+        Tienes 7 intentos para adivinarlo.
+      </p>
+
+      <input
+        type="number"
+        id="numero"
+        min="1"
+        max="100"
+        placeholder="Introduce un número"
+      >
+
+      <button type="button">
+        Comprobar
+      </button>
+
+      <p id="mensaje">¡Empieza a jugar!</p>
+
+      <p id="intentos">Intentos: 0 / 7</p>
+
+      <hr>
+
+      <h2>Marcador</h2>
+
+      <p id="ganadas">Partidas ganadas: 0</p>
+      <p id="perdidas">Partidas perdidas: 0</p>
+
+      <button type="button">
+        Nueva partida
+      </button>
+    </main>
+  </body>
+</html>

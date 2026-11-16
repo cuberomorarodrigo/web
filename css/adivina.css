@@ -1,0 +1,132 @@
+
+/* ESTILOS GENERALES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+main {
+    background-color: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* TITULOS */
+h1 {
+    color: #2563eb;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+h2 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* INSTRUCCIONES */
+main > p:first-of-type {
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* CAMPO DE ENTRADA */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* BOTONES */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* MENSAJES */
+#mensaje {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 12px;
+    background-color: #eff6ff;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #1d4ed8;
+    min-height: 45px;
+}
+
+/* INTENTOS */
+#intentos {
+    font-weight: bold;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+/* MARCADOR */
+#ganadas {
+    color: #16a34a;
+    margin-bottom: 8px;
+}
+
+#perdidas {
+    color: #dc2626;
+    margin-bottom: 20px;
+}
+
+/* SEPARADOR */
+hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 20px;
+}
+
+/* DISEÑO RESPONSIVE */
+@media (max-width: 480px) {
+    main {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
