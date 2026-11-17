@@ -58,8 +58,8 @@ console.log("Bienvenido a nuestra tienda");
 // Escribe tu código aquí.
 
 var nombreProducto = "Ratón";
-var precio = "15";
-var stock = "10";
+var precio = 15;
+var stock = 10;
 
 // TAREA 3.
 // Muestra por consola el nombre del producto,
@@ -88,7 +88,7 @@ console.log("\n===== NUESTROS PRODUCTOS =====");
 
 // Escribe tu código aquí.
 
-var productosArray = ["Ratón", "Teclado", "Pantalla", "Cascos", "Altavoces"];
+var productos = ["Ratón", "Teclado", "Pantalla", "Cascos", "Altavoces"];
 
 // TAREA 5.
 // Muestra por consola el array completo.
@@ -98,8 +98,8 @@ var productosArray = ["Ratón", "Teclado", "Pantalla", "Cascos", "Altavoces"];
 
 // Escribe tu código aquí.
 
-console.log(productosArray);
-console.log("Número de productos:" + productosArray.length);
+console.log(productos);
+console.log("Número de productos:" + productos.length);
 
 // TAREA 6.
 // Añade un nuevo producto al array utilizando push().
@@ -110,8 +110,8 @@ console.log("Número de productos:" + productosArray.length);
 // Escribe tu código aquí.
 
 var nuevoProducto = "Webcam";
-productosArray.push(nuevoProducto);
-console.log(productosArray);
+productos.push(nuevoProducto);
+console.log(productos);
 
 // TAREA 7.
 // Comprueba si el array contiene un producto
@@ -122,7 +122,7 @@ console.log(productosArray);
 
 // Escribe tu código aquí.
 
-var contieneProducto = productosArray.includes("Teclado");
+var contieneProducto = productos.includes("Teclado");
 console.log("¿Contiene Teclado? " + contieneProducto);
 
 // TAREA 8.
@@ -134,7 +134,7 @@ console.log("¿Contiene Teclado? " + contieneProducto);
 
 // Escribe tu código aquí.
 
-toUpperCaseProducto = productosArray[0].toUpperCase();
+var toUpperCaseProducto = productos[0].toUpperCase();
 console.log("Producto en mayúsculas " + toUpperCaseProducto);
 
 // =======================================================
@@ -231,7 +231,8 @@ else {
 if (stock >= unidadesCompradas) {
     console.log("Hay stock suficiente");
 }
-else {}
+else {console.log("No hay stock suficiente");
+}
 
 // TAREA 14.
 // Comprueba si el cliente puede recibir un descuento.
@@ -246,7 +247,12 @@ else {}
 
 // Escribe tu código aquí.
 
-
+if (unidadesCompradas >= 3) {
+    console.log("El cliente tiene descuento")
+}
+else {
+    console.log("El cliente no tiene descuento")
+}
 
 // =======================================================
 // APARTADO 5. BOOLEANOS Y OPERADORES LÓGICOS
@@ -263,14 +269,16 @@ console.log("\n===== COMPROBACIONES =====");
 
 // Escribe tu código aquí.
 
-
+var tiendaAbierta = true;
+var pagoRealizado = false;
 
 // TAREA 16.
 // Muestra por consola los valores de ambas variables.
 
 // Escribe tu código aquí.
 
-
+console.log("Tienda abierta: " + tiendaAbierta);
+console.log("Pago realizado: " + pagoRealizado);
 
 // TAREA 17.
 // Comprueba si la tienda está abierta Y el pago
@@ -285,7 +293,12 @@ console.log("\n===== COMPROBACIONES =====");
 
 // Escribe tu código aquí.
 
-
+if (tiendaAbierta && pagoRealizado) {
+    console.log("Pedido confirmado");
+}
+else{
+    console.log("Pedido pendiente");
+}
 
 // =======================================================
 // APARTADO 6. BUCLES
@@ -305,7 +318,10 @@ console.log("\n===== LISTA DE PRODUCTOS =====");
 //
 // Escribe tu código aquí.
 
-
+let i = 0;
+    for (i = 0; i < productos.length; i++) {
+        console.log(productos[i]);
+    }
 
 // TAREA 19.
 // Utiliza un bucle for...of para mostrar los productos
@@ -316,7 +332,10 @@ console.log("\n===== LISTA DE PRODUCTOS =====");
 //
 // Escribe tu código aquí.
 
-
+let producto;
+for (producto of productos) {
+    console.log(producto);
+}
 
 // TAREA 20.
 // Utiliza un bucle for para mostrar los números
@@ -331,7 +350,9 @@ console.log("\n===== LISTA DE PRODUCTOS =====");
 
 // Escribe tu código aquí.
 
-
+for (let i = 1; i <= 5; i++) {
+    console.log("Número: " + i);
+}
 
 // =======================================================
 // APARTADO 7. FUNCIONES
@@ -349,7 +370,10 @@ console.log("\n===== FUNCIONES DE LA TIENDA =====");
 
 // Escribe tu código aquí.
 
-
+function saludarCliente() {
+    console.log("Gracias por visitar nuestra tienda");
+}
+saludarCliente();
 
 // TAREA 22.
 // Crea una función llamada calcularTotal().
@@ -368,7 +392,10 @@ console.log("\n===== FUNCIONES DE LA TIENDA =====");
 
 // Escribe tu código aquí.
 
-
+function calcularTotal(precioProducto, cantidad) {
+    return precioProducto * cantidad;
+}
+console.log(calcularTotal(10, 3));
 
 // TAREA 23.
 // Crea una función llamada comprobarStock().
@@ -387,7 +414,15 @@ console.log("\n===== FUNCIONES DE LA TIENDA =====");
 
 // Escribe tu código aquí.
 
-
+function comprobarStock(stockDisponible, unidadesSolicitadas) {
+    if (stockDisponible >= unidadesSolicitadas) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(comprobarStock(10, 5));
+console.log(comprobarStock(3, 5));
 
 // =======================================================
 // APARTADO 8. RESUMEN FINAL
@@ -410,7 +445,12 @@ console.log("\n===== RESUMEN DE LA COMPRA =====");
 
 // Escribe tu código aquí.
 
-
+console.log("Nombre de la tienda: " + nombreTienda);
+console.log("Productos disponibles: " + productos);
+console.log("Producto Seleccionado: " + nombreProducto);
+console.log("Precio por unidad: " + precio);
+console.log("UnidadesCompradas: " + unidadesCompradas);
+console.log("Precio total: " + calcularTotal(precio, unidadesCompradas));
 
 // TAREA 25. RETO FINAL OPCIONAL.
 //
@@ -432,7 +472,12 @@ console.log("\n===== RESUMEN DE LA COMPRA =====");
 //
 // Escribe tu código aquí.
 
-
+if (comprobarStock(stock, unidadesCompradas) && tiendaAbierta && pagoRealizado) {
+    console.log("Compra realizada correctamente");
+}
+else {
+    console.log("No se puede completar la compra");
+}
 
 // =======================================================
 // FIN DE LA ACTIVIDAD
